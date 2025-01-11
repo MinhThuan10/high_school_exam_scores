@@ -1,0 +1,68 @@
+{% extends 'base.html' %} 
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/dashboard.css') }}"
+/>
+{% endblock %} 
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-6">
+          <canvas id="chartToan"></canvas>
+      </div>
+      <div class="col-md-6">
+          <canvas id="chartVan"></canvas>
+      </div>
+  </div>
+  <div class="row mt-4">
+      <div class="col-md-6">
+          <canvas id="chartNgoaiNgu"></canvas>
+      </div>
+      <div class="col-md-6">
+          <canvas id="chartVatLy"></canvas>
+      </div>
+  </div>
+  <div class="row mt-4">
+      <div class="col-md-6">
+          <canvas id="chartHoa"></canvas>
+      </div>
+      <div class="col-md-6">
+          <canvas id="chartSinh"></canvas>
+      </div>
+  </div>
+  <div class="row mt-4">
+      <div class="col-md-6">
+          <canvas id="chartSu"></canvas>
+      </div>
+      <div class="col-md-6">
+          <canvas id="chartDia"></canvas>
+      </div>
+  </div>
+
+  <div class="row mt-4">
+      <div class="col-md-6">
+          <canvas id="chartCongDan"></canvas>
+      </div>
+  </div>
+</div>
+
+
+<div id="loading" class="loading-spinner" style="display: none;">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+{% endblock %} 
+
+
+{% block extra_js %}
+
+<script
+  type="module"
+  src="{{ url_for('static', filename='js/dashboard.js') }}"
+></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

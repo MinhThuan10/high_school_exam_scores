@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Scores</title>
+    <!-- Thêm link tới Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+
+    {% block extra_css %}
+    <!-- Block cho CSS riêng -->
+    {% endblock %}
+</head>
+<body>
+    <div class="header">
+        <h1 class="header-title">G-Scores</h1>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Menu bên trái -->
+            <div class="col-md-3 sidebar menu">
+                <h3 class="text-center">Menu</h3>
+                <a class="dashboard" href="/dashboard">Dashboard</a>
+                <a class="search" href="/search">Search Scores</a>
+                <a class="reports" href="/report">Reports</a>
+                <a class="settings" href="/setting">Settings</a>
+            </div>
+
+            <div class="col-md-9 content-area">
+                
+            {% block content %}{% endblock %}
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Thêm link tới Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    {% block extra_js %}
+    
+    {% endblock %}
+</body>
+</html>

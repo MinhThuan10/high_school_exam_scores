@@ -1,0 +1,16 @@
+.dashboard{
+    background-color: rgb(252, 86, 56);
+}
+
+canvas {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}

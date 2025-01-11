@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css') }}"
+/>
+{% endblock %} 
+
+{% block content %}
+          
+<div class="form-container" id="registrationForm">
+    <h3>User Registration</h3>
+    <form>
+        <div class="mb-3">
+            <label for="regNumber" class="form-label">Registration Number:</label>
+            <input type="text" class="form-control" id="regNumber" placeholder="Enter registration number">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+
+<div id="Message" class="text mb-3"></div>
+
+<div class="mt-5" id="scoreDetails">
+    <h3>Detailed Scores</h3>
+    <p>Detailed view of search scores here!</p>
+</div>
+
+
+{% endblock %} 
+
+
+{% block extra_js %}
+
+<script
+  type="module"
+  src="{{ url_for('static', filename='js/index.js') }}"
+></script>
+{% endblock %}
